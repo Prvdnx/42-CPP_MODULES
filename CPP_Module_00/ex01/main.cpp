@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 02:19:41 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/01/25 04:49:23 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/01/25 05:18:59 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ int main(void)
 		}
 		else
 		{
-			std::cout << "\twrong input\n\tADD / SEARCH / EXIT\n\tno spaces" << std::endl;
+			std::cout << "\n\tWrong input!\n\tEnter: ADD or SEARCH or EXIT\n\tWith no spaces\n" << std::endl;
 		}
 		std::cout << "Input: ";
 	}
