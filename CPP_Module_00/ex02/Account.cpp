@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:12:24 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/01/25 06:56:52 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/01/25 22:04:18 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void Account::_displayTimestamp() {  // display timestamp
     std::cout << "[" << getTimeStamp() << "] ";
 }
 
-// donstructor with initial deposit
+// constructor with initial deposit
 Account::Account(int initial_deposit) : _accountIndex(_nbAccounts), _amount(initial_deposit), _nbDeposits(0), _nbWithdrawals(0) {
     _nbAccounts++;
     _totalAmount += initial_deposit;
