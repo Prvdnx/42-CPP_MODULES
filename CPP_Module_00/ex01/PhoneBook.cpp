@@ -16,7 +16,9 @@ PhoneBook::PhoneBook()
 {
     for (int i = 0; i < 8; i++)
         cont[i] = Contact(i);
-    std::cout << "Phonebook Constructed" << std::endl;
+    std::cout << std::endl;
+    std::cout << "✅ Phonebook 📖 Constructed ✅" << std::endl;
+    std::cout << std::endl;
 }
 
 PhoneBook::~PhoneBook(){}
@@ -25,11 +27,16 @@ void PhoneBook::Search() const
 {
     std::string indexStr;
 
-    std::cout << "   Index  |First Name| Last Name| Nickname " << std::endl;
+    std::cout << std::endl;
+    std::cout << "     ========================================" << std::endl;
+    std::cout << "     |Index|First Name| Last Name| Nickname |" << std::endl;
+    std::cout << "     |-----|----------|----------|----------|" << std::endl;
     for (int i = 0; i < 8; i++)
 	{
         cont[i].displayInfo();
     }
+    std::cout << "     ----------------------------------------" << std::endl;
+    std::cout << std::endl;
 
     std::cout << "Enter Index: ";
     std::getline(std::cin, indexStr);
@@ -42,6 +49,7 @@ void PhoneBook::Search() const
     }
 	else
 	{
-        std::cout << "Error: Invalid index" << std::endl;
+        std::cout << "⚠️Error⚠️: Invalid index 🚫" << std::endl;
+        std::cout << std::endl;
     }
 }

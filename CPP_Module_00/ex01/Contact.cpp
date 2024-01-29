@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// Contact.cpp
-
 #include "main.hpp"
 
 Contact::Contact(int i) : index(i), set(false){}
@@ -22,10 +20,10 @@ Contact::~Contact(){}
 
 void Contact::displayInfo() const
 {
-	std::cout << std::setw(10) << index << '|';
+	std::cout << std::setw(10) << "|    " << index << '|';
 	std::cout << std::setw(10) << (firstName.size() > 10 ? firstName.substr(0, 9) + '.' : firstName) << '|';
 	std::cout << std::setw(10) << (lastName.size() > 10 ? lastName.substr(0, 9) + '.' : lastName) << '|';
-	std::cout << std::setw(10) << (nickname.size() > 10 ? nickname.substr(0, 9) + '.' : nickname) << std::endl;
+	std::cout << std::setw(10) << (nickname.size() > 10 ? nickname.substr(0, 9) + '.' : nickname) << '|' << std::endl;
 }
 
 void Contact::emptyContact()
@@ -36,7 +34,7 @@ void Contact::emptyContact()
 	phoneNumber.clear();
 	darkestSecret.clear();
 	set = false;
-	std::cout << "Error: Empty contact info" << std::endl;
+	std::cout << "⚠️Error⚠️: Empty contact info" << std::endl;
 }
 
 void Contact::add()

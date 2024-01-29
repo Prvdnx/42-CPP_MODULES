@@ -10,27 +10,39 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
-
 CC = c++
+CFLAGS = -Wextra -Werror -Wall -std=c++98
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
+all: phoneBook
 
-SRC = megaphone.cpp
-
-OBJ = $(SRC:.cpp=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+megaphone: megaphone.cpp
+	$(CC) $(CFLAGS) $^ -o $@
 
 clean:
-	$(RM) $(OBJ)
+	rm -f megaphone
 
-fclean: clean
-	$(RM) $(NAME)
 
-re: fclean all
+# NAME = megaphone
 
-.PHONY: all clean fclean re
+# CC = c++
+
+# CFLAGS = -Wall -Werror -Wextra -std=c++98
+
+# SRC = megaphone.cpp
+
+# OBJ = $(SRC:.cpp=.o)
+
+# all: $(NAME)
+
+# $(NAME): $(OBJ)
+# 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+
+# clean:
+# 	$(RM) $(OBJ)
+
+# fclean: clean
+# 	$(RM) $(NAME)
+
+# re: fclean all
+
+# .PHONY: all clean fclean re

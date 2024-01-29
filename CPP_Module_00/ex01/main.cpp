@@ -37,7 +37,7 @@ int main(void)
 		}
 		else
 		{
-			std::cout << "\n\tInvalid input!!\n" << std::endl;
+			std::cout << "\n\tInvalid input!!🚫\n" << std::endl;
 		}
 		std::cout << "Input one operation (ADD / SEARCH / EXIT): ";
 	}
