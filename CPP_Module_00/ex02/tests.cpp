@@ -7,9 +7,9 @@
 //                                                                            //
 // ************************************************************************** //
 
-#include <vector>
-#include <algorithm>
-#include <functional>
+#include <vector> // for use of vectors (kind of an alternative to arrays)
+#include <algorithm> // for algorithms (e.g. std::for_each, which applies a function to each element in a specified range)
+#include <functional> // included for functionality related to function objects & operations (e.g. std::mem_fun_ref, a function template that generates function objects used to call member functions on objects)
 #include "Account.hpp"
 
 
