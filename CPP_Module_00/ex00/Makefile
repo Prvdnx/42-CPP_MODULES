@@ -6,14 +6,14 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 00:23:41 by ookamonu          #+#    #+#              #
-#    Updated: 2024/01/25 02:18:05 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/01/30 17:58:44 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 CFLAGS = -Wextra -Werror -Wall -std=c++98
 
-all: phoneBook
+all: megaphone
 
 megaphone: megaphone.cpp
 	$(CC) $(CFLAGS) $^ -o $@

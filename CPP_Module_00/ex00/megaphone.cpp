@@ -6,12 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 00:19:07 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/01/25 01:54:16 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/01/30 15:21:32 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream> // includes the input/output stream header for using standard I/O functions.
-#include <string> // includes the string header for string manipulation functions.
+#include <iostream> // input/output stream header for using standard I/O functions.
+#include <string> // string header for string manipulation functions.
 
 std::string upper(std::string str)
 {
