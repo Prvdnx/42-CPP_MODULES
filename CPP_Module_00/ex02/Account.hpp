@@ -21,38 +21,38 @@ class Account {
 
 public:
 
-	typedef Account		t;
+	typedef Account		t; // defining a new type named t as an alias for Account class (shorthand / alternative name for Account type)
 
-	static int	getNbAccounts( void );
-	static int	getTotalAmount( void );
-	static int	getNbDeposits( void );
-	static int	getNbWithdrawals( void );
-	static void	displayAccountsInfos( void );
+	static int	getNbAccounts( void ); // function to return total num of accounts
+	static int	getTotalAmount( void ); // function to returns total amount across all accounts
+	static int	getNbDeposits( void ); // function to returns total num of deposits made across all accounts
+	static int	getNbWithdrawals( void ); // returns total num of withdrawals made across all accounts
+	static void	displayAccountsInfos( void ); // displays global account statistics
 
-	Account( int initial_deposit );
-	~Account( void );
+	Account( int initial_deposit ); // paramitized constructor
+	~Account( void ); // destructor
 
-	void	makeDeposit( int deposit );
-	bool	makeWithdrawal( int withdrawal );
-	int		checkAmount( void ) const;
-	void	displayStatus( void ) const;
+	void	makeDeposit( int deposit ); // func to deposits a specified amount into account
+	bool	makeWithdrawal( int withdrawal ); // funct to withdraws a specified amount from account
+	int		checkAmount( void ) const; // func that returns current amount in account
+	void	displayStatus( void ) const; // func that displays current status of account
 
 
 private:
 
-	static int	_nbAccounts;
-	static int	_totalAmount;
-	static int	_totalNbDeposits;
-	static int	_totalNbWithdrawals;
+	static int	_nbAccounts; // total num  of accounts
+	static int	_totalAmount; // total amount across all accounts
+	static int	_totalNbDeposits; // total num of deposits made across all accounts
+	static int	_totalNbWithdrawals; // total num of withdrawals made across all
 
-	static void	_displayTimestamp( void );
+	static void	_displayTimestamp( void ); // function used internally for displaying timestamps
 
-	int				_accountIndex;
-	int				_amount;
-	int				_nbDeposits;
-	int				_nbWithdrawals;
+	int				_accountIndex; // index of the current account
+	int				_amount; // current amount in the account
+	int				_nbDeposits; // num of deposits made in account
+	int				_nbWithdrawals; // num of withdrawals made from the account
 
-	Account( void );
+	Account( void ); // constructor
 
 };
 
