@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:12:24 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/01/30 19:43:57 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/01/31 12:09:52 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 std::string getTimeStamp()  // simulate timestamp
 {
     char timestamp[20];
-    std::time_t t = std::time(nullptr); // gets current time in seconds since the epoch (January 1, 1970)
+    std::time_t t = std::time(NULL); // gets current time in seconds since the epoch (January 1, 1970)
     std::strftime(timestamp, sizeof(timestamp), "%Y%m%d_%H%M%S", std::localtime(&t)); // format time as "YYYYMMDD_HHMMSS" & store it in 'timestamp' array ("%Y-%m-%d %H:%M:%S")
     return timestamp; // returns string representing current timestamp
 }
