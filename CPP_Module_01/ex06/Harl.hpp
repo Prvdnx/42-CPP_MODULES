@@ -34,8 +34,8 @@ class	Harl
 		void	warning();
 		void	error();
 	public:
-		Harl(void);
-		~Harl(void);
+		Harl();
+		~Harl();
 		void	complain(const std::string level);
 };
 
