@@ -15,8 +15,7 @@
 /*-------------------------------------Weapon.cpp------------------------------------*\
 defines the behavior of the Weapon class; the constructor, destructor, getter, & setter
 functions for the 'type' attribute. The class encapsulates the behavior of a weapon by
-providing methods to get & set its type. Memory management by defining a destructor
-which doesnt perform any explicit cleanup since no dynamic memory is managed.
+providing methods to get & set its type.
 \*-----------------------------------------------------------------------------------*/
 
 Weapon::Weapon(std::string type) : type_(type) {}
