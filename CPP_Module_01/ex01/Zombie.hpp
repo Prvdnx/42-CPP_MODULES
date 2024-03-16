@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <string>
-#define COLOR_RED     "\033[31m"
-#define COLOR_GREEN   "\033[32m"
-#define COLOR_YELLOW  "\033[33m"
+# include <iostream>
+# include <string>
+# define COLOR_RED     "\033[31;1m"
+# define COLOR_LEMON  "\033[93m"
 
 /*------------------------------------Zombie.hpp-----------------------------------*\
 declares the Zombie class, which represents a zombie entity & defines the class with
@@ -28,15 +28,15 @@ announcement, while the giveName() function sets the name of the zombie.
 class Zombie
 {
 	private:
-		std::string name_;
+		std::string	name_;
 	public:
 		Zombie();
 		Zombie(std::string name);
 		~Zombie();
-		void announce();
-		void giveName(std::string nm);
+		void	announce();
+		void	giveName(std::string nm);
 };
 
-Zombie* zombieHorde(int N, std::string name);
+Zombie	*zombieHorde(int N, std::string name);
 
 #endif

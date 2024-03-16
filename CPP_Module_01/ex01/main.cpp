@@ -21,15 +21,20 @@ Dynamic memory allocation ensures that Zombie objects' lifetimes extend beyond t
 of their creation functions, allowing them to be used throughout the program.
 \*-----------------------------------------------------------------------------------*/
 
-int	main()
+int   main()
 {
-	const int N = 8;
-	Zombie* Horde = zombieHorde(N, "Alpha");
-	for (int i = 0; i < N; ++i)
+	const int   num = 8;
+	Zombie   *Horde = zombieHorde(num, "Alpha");
+
+   std::cout << std::endl;
+	for (int i = 0; i < num; ++i)
 	{
 		Horde[i].announce();
 	}
+
+	std::cout << std::endl;
 	delete[] Horde;
+	std::cout << std::endl;
 
 	// Zombie* Horde2 = zombieHorde(2, "Philip");
 	// for (int i = 0; i < 2; ++i)

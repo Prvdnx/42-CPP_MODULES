@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include <iostream>
 
 /*------------------------------------Zombie.cpp-------------------------------------*\
 implements member functions of the Zombie class declared in Zombie.hpp.
@@ -24,21 +23,19 @@ The giveName() function which sets the name of the zombie.
 Zombie::Zombie() {}
 Zombie::Zombie(std::string name) : name_(name) {}
 
-int num1 = 1;
-int num2 = 1;
+int	numCreated = 1;
+int	numDestroyed = 1;
 Zombie::~Zombie()
 {
-	std::cout << std::endl;
-	std::cout << name_ << " " << num2++ << " : destroyed!" << std::endl;
+	std::cout << COLOR_RED << name_ << " " << numDestroyed++ << " : destroyed!" << std::endl;
 }
 
-void Zombie::giveName(std::string nm)
+void	Zombie::giveName(std::string nm)
 {
 	name_ = nm;
 }
 
-void Zombie::announce()
+void	Zombie::announce()
 {
-	std::cout << std::endl;
-	std::cout << name_ << " " << num1++ << " : BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << COLOR_LEMON << name_ << " " << numCreated++ << " : BraiiiiiiinnnzzzZ..." << std::endl;
 }
