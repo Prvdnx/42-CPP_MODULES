@@ -11,10 +11,10 @@
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
 
 /*------------------------------------Zombie.hpp-----------------------------------*\
 Zombie class declared & defined with a private member variable `name_` of type string
@@ -31,7 +31,7 @@ randomChump responsible for creating a local Zombie object
 class Zombie
 {
 	private:
-		std::string name_;
+		std::string	name_;
 	public:
 		Zombie(std::string name);
 		~Zombie();
