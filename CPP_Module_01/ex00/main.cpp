@@ -22,7 +22,7 @@ creation functions, allowing them to be used throughout the program
 
 int main()
 {
-	Zombie* zombie = newZombie("Foo");
+	Zombie *zombie = newZombie("Foo");
 	zombie->announce();
 	delete zombie;
                                                                                                                                                                                                                                                                                                                      

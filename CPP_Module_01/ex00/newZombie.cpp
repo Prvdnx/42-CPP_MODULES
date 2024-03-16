@@ -17,7 +17,7 @@ the newZombie function creates a new Zombie object dynamically and returns a
 pointer to the created Zombie with the given name.
 \*---------------------------------------------------------------------------*/
 
-Zombie* newZombie(std::string name)
+Zombie  *newZombie(std::string name)
 {
     return new Zombie(name);
 }

@@ -17,8 +17,8 @@
 #include <iostream>
 
 /*------------------------------------Zombie.hpp-----------------------------------*\
-Zombie class declared & defined with a private member variable `name_` of type
-string and public members;
+Zombie class declared & defined with a private member variable `name_` of type string
+and public members;
   - Constructor that initializes `name_` with the given name as defined in Zombie.cpp
   - destructor that prints a message indicating the destruction of the Zombie object
   as defined in Zombie.cpp
