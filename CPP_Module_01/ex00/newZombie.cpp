@@ -19,5 +19,5 @@ pointer to the created Zombie with the given name.
 
 Zombie  *newZombie(std::string name)
 {
-    return new Zombie(name);
+    return (new Zombie(name));
 }
