@@ -22,6 +22,7 @@ on these objects to demonstrate their behavior.
 
 int main()
 {
+	std::cout << std::endl;
 	{
 		Weapon	club = Weapon("crude spiked club");
 
@@ -40,6 +41,7 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
+	std::cout << std::endl;
 		
 	return (0);
 }
