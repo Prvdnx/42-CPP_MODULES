@@ -19,11 +19,11 @@ the randomChump function creates a local Zombie object with the given name and
 calls the announce function to print its announcement.
 \*-----------------------------------------------------------------------------*/
 
-void randomChump(std::string name)
+void	randomChump(std::string name)
 {
     // std::cout << "seed value: " << static_cast<unsigned int>(time(NULL)) << std::endl;
 	// srand(static_cast<unsigned int>(time(NULL)));
 	
-	Zombie zombie(name);
+	Zombie	zombie(name);
 	zombie.announce();
 }

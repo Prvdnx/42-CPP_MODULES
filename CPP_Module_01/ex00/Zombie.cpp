@@ -13,10 +13,10 @@
 #include "Zombie.hpp"
 
 /*----------------------------------Zombie.cpp----------------------------------*\
-1. it defines constructor to initialize the name_ attribute of Zombie object with
-   the value passed as name parameter
-2. defines destructor to print message indicating destruction of the Zombie object
-3. defines the announce() function to print the announcement message.
+it defines constructor to initialize the name_ attribute of Zombie object with the
+  value passed as name parameter.
+defines destructor to print message indicating destruction of the Zombie object.
+defines the announce() function to print the announcement message.
 \*------------------------------------------------------------------------------*/
 
 Zombie::Zombie(std::string name) : name_(name) {}
@@ -26,7 +26,7 @@ Zombie::~Zombie()
 	std::cout << name_ << " destroyed!" << std::endl;
 }
 
-void Zombie::announce()
+void	Zombie::announce()
 {
 	std::cout << name_ << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
+# define ZOMBIE_HPP
 
-#include <string>
-#include <iostream>
+# include <string>
+# include <iostream>
 
 /*------------------------------------Zombie.hpp-----------------------------------*\
-Zombie class declared & defined with a private member variable `name_` of type
-string and public members;
+Zombie class declared & defined with a private member variable `name_` of type string
+and public members;
   - Constructor that initializes `name_` with the given name as defined in Zombie.cpp
   - destructor that prints a message indicating the destruction of the Zombie object
   as defined in Zombie.cpp
@@ -31,14 +31,14 @@ randomChump responsible for creating a local Zombie object
 class Zombie
 {
 	private:
-		std::string name_;
+		std::string	name_;
 	public:
 		Zombie(std::string name);
 		~Zombie();
-		void announce();
+		void	announce();
 };
 
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
+Zombie	*newZombie(std::string name);
+void	randomChump(std::string name);
 
 #endif
