@@ -6,7 +6,7 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/11 05:34:26 by ookamonu          #+#    #+#              #
-#    Updated: 2024/03/19 09:02:41 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/03/19 23:36:35 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ CC		= c++
 
 CFLAGS	= -g3 -std=c++98 -Wextra -Werror -Wall
 
-HEADER	= ClapTrap.hpp
+HEADER	= ClapTrap.hpp ScavTrap.hpp
 
-SRCS	= ClapTrap.cpp main.cpp
+SRCS	= ClapTrap.cpp ScavTrap.cpp main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 
