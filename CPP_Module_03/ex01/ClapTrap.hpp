@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 09:00:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/20 04:34:23 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/20 05:51:07 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string name;
 		int	hitPoints;
 		int	energyPoints;

@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 09:00:55 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/20 05:19:44 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/20 06:02:01 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap named " << name << " is born!" << std::endl;
+	std::cout << "ClapTrap Constructor in Action!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "Destructor activated for ClapTrap named " << name << std::endl;
+	std::cout << "Destructor activated for ClapTrap" << std::endl;
 }
 
 void ClapTrap::attack(const std::string &target)
