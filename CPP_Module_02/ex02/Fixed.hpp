@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 00:02:46 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/19 08:40:28 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/19 08:42:17 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,6 @@ class Fixed
 		static  const Fixed &max(const Fixed &a, const Fixed &b);
 
 		friend std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
-
 };
 
 #endif
-
