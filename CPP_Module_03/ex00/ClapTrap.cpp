@@ -6,13 +6,13 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 09:00:55 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/20 04:34:20 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/20 05:17:56 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(const std::string& name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
+ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
 	std::cout << "ClapTrap named " << name << " is born!" << std::endl;
 }
@@ -22,7 +22,7 @@ ClapTrap::~ClapTrap()
 	std::cout << "Destructor activated for ClapTrap named " << name << std::endl;
 }
 
-void ClapTrap::attack(const std::string& target)
+void ClapTrap::attack(const std::string &target)
 {
 	if (hitPoints <= 0)
 	{
