@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 09:00:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/20 07:03:38 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/21 03:16:41 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define FRAGTRAP_HPP
 
 # include "ClapTrap.hpp"
+# include "ScavTrap.hpp"
 
 class FragTrap : public ClapTrap
 {
