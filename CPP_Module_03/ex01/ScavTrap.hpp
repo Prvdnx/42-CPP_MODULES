@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/19 09:00:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/20 05:49:32 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/20 06:50:21 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,10 @@
 
 class ScavTrap : public ClapTrap
 {
-    public:
-        ScavTrap(const std::string& name);
-        ~ScavTrap();
-        void guardGate();
-    private:
+	public:
+		ScavTrap(const std::string& name);
+		~ScavTrap();
+		void guardGate();
 };
 
 #endif
