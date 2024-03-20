@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FlagTrap.cpp                                  :+:      :+:    :+:   */
+/*   FragTrap.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,3 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "FragTrap.hpp"
+
+FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
+{
+    std::cout << "FragTrap named " << name << " enters the battlefield!" << std::endl;
+    hitPoints = 100;
+    energyPoints = 100;
+    attackDamage = 30;
+}
+
+FragTrap::~FragTrap()
+{
+    std::cout << "FragTrap named " << name << " leaves the battlefield!" << std::endl;
+}
+
+void FragTrap::highFivesGuys()
+{
+    std::cout << "FragTrap " << name << " requests a high five!" << std::endl;
+}

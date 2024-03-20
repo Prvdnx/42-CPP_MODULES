@@ -6,19 +6,19 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/11 05:34:26 by ookamonu          #+#    #+#              #
-#    Updated: 2024/03/19 23:37:43 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/03/20 07:03:25 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= Clap
+NAME	= Flag
 
 CC		= c++
 
 CFLAGS	= -g3 -std=c++98 -Wextra -Werror -Wall
 
-HEADER	= ClapTrap.hpp ScavTrap.hpp FlagTrap.hpp
+HEADER	= ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
 
-SRCS	= ClapTrap.cpp ScavTrap.cpp FlagTrap.cpp main.cpp
+SRCS	= ClapTrap.cpp ScavTrap.cpp FragTrap.cpp main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

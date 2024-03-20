@@ -10,3 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
+{
+	std::cout << "ScavTrap Constructor in Action!" << std::endl;
+	hitPoints = 100;
+	energyPoints = 50;
+	attackDamage = 20;
+}
+
+ScavTrap::~ScavTrap()
+{
+	std::cout << "ScavTrap Destructor activated!" << std::endl;
+}
+
+void ScavTrap::guardGate()
+{
+	std::cout << "ScavTrap is now in Gatekeeper mode!" << std::endl;
+}
