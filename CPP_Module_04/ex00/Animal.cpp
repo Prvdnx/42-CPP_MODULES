@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 02:47:43 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 02:48:45 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal()
 	std::cout << "Animal default constructor called" << std::endl;
 }
 
-Animal::Animal(const Animal& other)
+Animal::Animal(const Animal &other)
 {
 	this->type = other.type;
 	std::cout << "Animal copy constructor called" << std::endl;
