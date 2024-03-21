@@ -6,12 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:28:22 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 02:31:16 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 03:04:54 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __WRONGCAT_HPP__
-# define __WRONGCAT_HPP__
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
 # include "WrongAnimal.hpp"
 # include <iostream>

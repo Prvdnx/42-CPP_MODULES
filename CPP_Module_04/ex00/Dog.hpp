@@ -6,12 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:33 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 02:34:38 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 03:04:21 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __DOG_HPP__
-# define __DOG_HPP__
+#ifndef DOG_HPP
+# define DOG_HPP
 
 # include "Animal.hpp"
 # include <iostream>
