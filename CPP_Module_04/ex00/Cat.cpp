@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 05:07:57 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:40:19 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 Cat::Cat() : Animal()
 {
 	this->type = "Cat";
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "Cat default constructor activated" << std::endl;
 }
 
 Cat::Cat(const Cat &other) : Animal(other)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "Cat copy constructor activated" << std::endl;
 }
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "Cat destructor activated" << std::endl;
 }
 
 void Cat::makeSound() const

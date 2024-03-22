@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 17:26:30 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:45:42 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,17 +37,16 @@ int main()
 	for (int i = 0; i < 4; i++)
 		delete t[i];
 	std::cout << std::endl;
+	
 	Dog	basic;
-	Dog tmp = basic;
-	{
-		// Dog tmp = basic;
-		for (int i = 0; i < 100; i++)	
-			basic.getBrain()->setIdea("New_thought ", i);
-	}	
+	Dog copy = basic;
+	for (int i = 0; i < 100; i++)
+		basic.getBrain()->setIdea(" New_thought_", i);
+			
 	basic.think();
-	std::cout << "\nInitial copy of basic: " << tmp.getBrain()->getIdea(0) << std::endl;
+	std::cout << "\nInitial copy: " << copy.getBrain()->getIdea(0) << std::endl;
 	std::cout << std::endl;
-		
+
 	return (0);
 }
 

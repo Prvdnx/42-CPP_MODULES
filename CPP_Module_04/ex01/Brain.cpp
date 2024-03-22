@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 04:43:13 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 07:48:58 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:38:25 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 Brain::Brain()
 {
-	std::cout << "Brain default constructor called" << std::endl;
+	std::cout << "Brain default constructor activated" << std::endl;
 	this->ideas = new std::string[100];
 	for (int i = 0; i < 100; i++)
-        ideas[i] = "Thinking... ";
+        ideas[i] = " Thinking...";
 }
 
 Brain::Brain(const Brain &other)
 {
-	std::cout << "Brain copy constructor called" << std::endl;
+	std::cout << "Brain copy constructor activated" << std::endl;
 	this->ideas = new std::string[100];
 	for (int i = 0; i < 100; i++)
 		this->ideas[i] = other.ideas[i];
@@ -30,7 +30,7 @@ Brain::Brain(const Brain &other)
 
 Brain::~Brain()
 {
-	std::cout << "Brain destructor called" << std::endl;
+	std::cout << "Brain destructor activated" << std::endl;
 	delete[] this->ideas;
 }
 

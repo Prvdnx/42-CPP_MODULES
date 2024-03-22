@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 05:08:11 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:40:30 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,17 @@
 Dog::Dog() : Animal()
 {
 	this->type = "Dog";
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << "Dog default constructor activated" << std::endl;
 }
 
 Dog::Dog(const Dog &other) : Animal(other)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "Dog copy constructor activated" << std::endl;
 }
 
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Dog destructor activated" << std::endl;
 }
 
 void Dog::makeSound() const

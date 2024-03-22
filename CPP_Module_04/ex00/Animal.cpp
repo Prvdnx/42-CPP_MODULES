@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 02:51:48 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 20:40:05 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,18 @@
 Animal::Animal()
 {
 	this->type = "Animal";
-	std::cout << "Animal default constructor called" << std::endl;
+	std::cout << "Animal default constructor activated" << std::endl;
 }
 
 Animal::Animal(const Animal &other)
 {
 	this->type = other.type;
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "Animal copy constructor activated" << std::endl;
 }
 
 Animal::~Animal()
 {
-	std::cout << "Animal destructor called" << std::endl;
+	std::cout << "Animal destructor activated" << std::endl;
 }
 
 std::string Animal::getType() const
