@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 01:28:02 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 05:05:31 by ookamonu         ###   ########.fr       */
+/*   Created: 2024/03/22 01:28:22 by ookamonu          #+#    #+#             */
+/*   Updated: 2024/03/22 05:02:30 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef WRONGCAT_HPP
+# define WRONGCAT_HPP
 
-# include <string>
+# include "WrongAnimal.hpp"
 # include <iostream>
 
-class WrongAnimal
+class WrongCat: public WrongAnimal
 {
-	protected:
-		std::string type;
-	public:
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &other); // Copy constructor
-		virtual ~WrongAnimal();
-		void	makeSound() const;
-		std::string	getType() const;
+public:
+	WrongCat();
+	WrongCat(const WrongCat &other); // Copy constructor
+	~WrongCat();
+	void	makeSound() const;
 };
 
-#endif
+# endif

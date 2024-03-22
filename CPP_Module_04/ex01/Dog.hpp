@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 01:28:02 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 05:05:31 by ookamonu         ###   ########.fr       */
+/*   Created: 2024/03/22 01:27:33 by ookamonu          #+#    #+#             */
+/*   Updated: 2024/03/22 07:44:04 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-# include <string>
+# include "Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class WrongAnimal
+class Dog: public Animal
 {
-	protected:
-		std::string type;
+	private:
+		Brain *brain;
 	public:
-		WrongAnimal();
-		WrongAnimal(const WrongAnimal &other); // Copy constructor
-		virtual ~WrongAnimal();
+		Dog();
+		Dog(const Dog &other); //Copy constructor
+		~Dog();
 		void	makeSound() const;
-		std::string	getType() const;
+		virtual void	think(void) const;
+		Brain* getBrain();
 };
 
 #endif

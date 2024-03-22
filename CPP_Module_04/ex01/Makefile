@@ -6,19 +6,19 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/11 05:34:26 by ookamonu          #+#    #+#              #
-#    Updated: 2024/03/22 01:32:56 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/03/22 04:13:50 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= 
+NAME	= AnimalBrain
 
 CC		= c++
 
 CFLAGS	= -g3 -std=c++98 -Wextra -Werror -Wall
 
-HEADER	= .hpp
+HEADER	= Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp Brain.hpp
 
-SRCS	= .cpp main.cpp
+SRCS	= Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp Brain.cpp main.cpp
 
 OBJS	= $(SRCS:.cpp=.o)
 

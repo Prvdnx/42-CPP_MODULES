@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:28:12 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 05:06:34 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 05:06:41 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ WrongCat::~WrongCat()
 	std::cout << "WrongCat destructor called" << std::endl;
 }
 
-void	WrongCat::makeSound() const
+void WrongCat::makeSound() const
 {
 	std::cout << "Wrong meow meow" << std::endl;
 }
