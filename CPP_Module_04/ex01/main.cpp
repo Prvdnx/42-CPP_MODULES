@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 09:00:20 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/22 17:26:30 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,11 @@ int main()
 	{
 		// Dog tmp = basic;
 		for (int i = 0; i < 100; i++)	
-			basic.getBrain()->setIdea("New_idea ", i);
+			basic.getBrain()->setIdea("New_thought ", i);
 	}	
 	basic.think();
-	std::cout << "Copied from basic: " << tmp.getBrain()->getIdea(0) << std::endl;
+	std::cout << "\nInitial copy of basic: " << tmp.getBrain()->getIdea(0) << std::endl;
+	std::cout << std::endl;
 		
 	return (0);
 }
