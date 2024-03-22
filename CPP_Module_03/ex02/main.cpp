@@ -14,38 +14,41 @@
 
 int	main(void)
 {
-	ClapTrap claptrap("Dark Knight");
-	ScavTrap scavtrap("Scavenger");
-	FragTrap fragtrap("Fragger");
+	ClapTrap claptrap("Dark_Knight");
+	ScavTrap scavtrap("Junkyard_Guardian");
+	FragTrap fragtrap("Lord_Zoro");
 
+	std::cout << std::endl;
 	scavtrap.guardGate();
-	claptrap.attack("Scavenger");
+	claptrap.attack("Junkyard_Guardian");
 	scavtrap.takeDamage(0);
 	scavtrap.beRepaired(5);
 	fragtrap.highFivesGuys();
-	fragtrap.attack("Scavenger");
+	fragtrap.attack("Junkyard_Guardian");
 	scavtrap.takeDamage(30);
 	scavtrap.beRepaired(5);
-	scavtrap.attack("Fragger");
+	scavtrap.attack("Lord_Zoro");
 	fragtrap.takeDamage(20);
 	fragtrap.beRepaired(5);
 	fragtrap.highFivesGuys();
-	fragtrap.attack("Scavenger");
+	fragtrap.attack("Junkyard_Guardian");
 	scavtrap.takeDamage(30);
 	scavtrap.beRepaired(5);
-	scavtrap.attack("Fragger");
+	scavtrap.attack("Lord_Zoro");
 	fragtrap.takeDamage(20);
 	fragtrap.beRepaired(5);
-	fragtrap.attack("Scavenger");
+	fragtrap.attack("Junkyard_Guardian");
 	scavtrap.takeDamage(30);
 	scavtrap.beRepaired(5);
-	scavtrap.attack("Fragger");
+	scavtrap.attack("Lord_Zoro");
 	fragtrap.takeDamage(20);
 	fragtrap.beRepaired(5);
-	fragtrap.attack("Scavenger");
+	fragtrap.attack("Junkyard_Guardian");
 	scavtrap.takeDamage(30);
 	scavtrap.beRepaired(5);
 	fragtrap.highFivesGuys();
 	scavtrap.guardGate();
+	std::cout << std::endl;
+
 	return (0);
 }

@@ -14,27 +14,27 @@
 
 int main()
 {
-	ClapTrap claptrap2("Crimson Blade");
-	ScavTrap scavtrap2("Junkyard Guardian");
+	ClapTrap claptrap2("Crimson_Blade");
+	ScavTrap scavtrap2("Junkyard_Demon");
 
 	scavtrap2.guardGate();
-	claptrap2.attack("Junkyard Guardian");
+	claptrap2.attack("Junkyard_Demon");
 	scavtrap2.takeDamage(10);
 	scavtrap2.beRepaired(8);
-	scavtrap2.attack("Crimson Blade");
+	scavtrap2.attack("Crimson_Blade");
 	claptrap2.takeDamage(15);
 	claptrap2.beRepaired(3);
 	scavtrap2.guardGate();
 	std::cout << std::endl;
 	
-	ClapTrap claptrap("The Boss");
-	ScavTrap scavtrap("The Punisher");
+	ClapTrap claptrap("Da_Menace");
+	ScavTrap scavtrap("The_Punisher");
 
 	scavtrap.guardGate();
-	claptrap.attack("Scavenger");
-	scavtrap.takeDamage(0);
+	claptrap.attack("The_Punisher");
+	scavtrap.takeDamage(6);
 	scavtrap.beRepaired(5);
-	scavtrap.attack("Dark Knight");
+	scavtrap.attack("Da_Menace");
 	claptrap.takeDamage(20);
 	claptrap.beRepaired(5);
 	scavtrap.guardGate();
