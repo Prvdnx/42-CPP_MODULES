@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 01:26:16 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:07:22 by ookamonu         ###   ########.fr       */
+/*   Created: 2024/03/22 01:26:52 by ookamonu          #+#    #+#             */
+/*   Updated: 2024/03/23 10:11:47 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
-# include <string>
+# include "Abt_Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class Animal
+class Cat: public Abt_Animal
 {
-	protected:
-		std::string type;
+	private:
+		Brain *brain;
 	public:
-		Animal();
-		Animal(const Animal &other); //copy constructor
-		Animal &operator=(const Animal &rhs); //copy assignment operator
-		virtual ~Animal();
-		virtual void	makeSound() const;
-		std::string	getType() const;
-		virtual void	think() const; //member function to simulate thinking
+		Cat();
+		Cat(const Cat &other); //copy constructor
+		Cat &operator=(const Cat &rhs); //copy assignment operator
+		~Cat();
+		void	makeSound() const;
+		virtual void	think(void) const;
 };
 
 #endif

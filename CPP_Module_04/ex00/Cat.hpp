@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 03:03:47 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/23 09:32:00 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,13 @@
 
 class Cat: public Animal
 {
-    public:
-        Cat();
-        Cat(const Cat &other); // Copy constructor
-        ~Cat();
-        void makeSound() const;
+	public:
+		Cat();
+		Cat(const Cat &other); //copy constructor
+		Cat &operator=(const Cat &rhs); //copy assignment operator
+		~Cat();
+		void makeSound() const;
+	private:
 };
 
 #endif

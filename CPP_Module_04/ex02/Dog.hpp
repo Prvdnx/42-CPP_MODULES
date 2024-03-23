@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 01:26:16 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:07:22 by ookamonu         ###   ########.fr       */
+/*   Created: 2024/03/22 01:27:33 by ookamonu          #+#    #+#             */
+/*   Updated: 2024/03/23 10:12:44 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-# include <string>
+# include "Abt_Animal.hpp"
+# include "Brain.hpp"
 # include <iostream>
 
-class Animal
+class Dog: public Abt_Animal
 {
-	protected:
-		std::string type;
+	private:
+		Brain *brain;
 	public:
-		Animal();
-		Animal(const Animal &other); //copy constructor
-		Animal &operator=(const Animal &rhs); //copy assignment operator
-		virtual ~Animal();
-		virtual void	makeSound() const;
-		std::string	getType() const;
-		virtual void	think() const; //member function to simulate thinking
+		Dog();
+		Dog(const Dog &other); //Copy constructor
+	    Dog &operator=(const Dog &rhs); //copy assignment operator
+		~Dog();
+		void	makeSound() const;
+		virtual void	think(void) const;
+		Brain* getBrain();
 };
 
 #endif

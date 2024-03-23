@@ -6,20 +6,20 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:48:55 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/23 10:12:27 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : Abt_Animal()
 {
 	this->type = "Dog";
 	std::cout << "Dog default constructor activated" << std::endl;
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &other) : Animal()
+Dog::Dog(const Dog &other) : Abt_Animal()
 {
 	std::cout << "Dog copy constructor activated" << std::endl;
 	this->type = other.type;

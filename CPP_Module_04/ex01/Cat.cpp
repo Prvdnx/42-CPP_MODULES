@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 20:38:05 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/23 09:49:02 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,18 @@ Cat::Cat(const Cat &other) : Animal()
 	this->brain = new Brain(*(other.brain));
 }
 
+Cat &Cat::operator=(const Cat &rhs)
+{
+	if (this != &rhs)
+	{
+		this->type = rhs.type; //assign type member variable from base class
+		delete this->brain; //delete existing Brain object
+		this->brain = new Brain(*rhs.brain); //create a new Brain object & copy from rhs
+	}
+	std::cout << "Cat copy assignment operator activated" << std::endl;
+	return (*this);
+}
+
 Cat::~Cat()
 {
 	std::cout << "Cat destructor activated" << std::endl;
@@ -40,7 +52,7 @@ void	Cat::makeSound() const
 void	Cat::think() const
 {
 	std::cout << std::endl;
-    for (int i = 0; i < 100; i++)
-        std::cout << brain->getIdea(i) << 1 + i << ' ';
+	for (int i = 0; i < 100; i++)
+		std::cout << brain->getIdea(i) << 1 + i << ' ';
 	std::cout << std::endl;
 }

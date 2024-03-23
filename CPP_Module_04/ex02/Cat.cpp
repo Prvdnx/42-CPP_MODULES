@@ -1,63 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:48:55 by ookamonu         ###   ########.fr       */
+/*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
+/*   Updated: 2024/03/23 10:11:09 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "Cat.hpp"
 
-Dog::Dog() : Animal()
+Cat::Cat() : Abt_Animal()
 {
-	this->type = "Dog";
-	std::cout << "Dog default constructor activated" << std::endl;
+	this->type = "Cat";
+	std::cout << "Cat default constructor activated" << std::endl;
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &other) : Animal()
+Cat::Cat(const Cat &other) : Abt_Animal()
 {
-	std::cout << "Dog copy constructor activated" << std::endl;
+	std::cout << "Cat copy constructor activated" << std::endl;
 	this->type = other.type;
 	this->brain = new Brain(*(other.brain));
 }
 
-Dog &Dog::operator=(const Dog &rhs)
+Cat &Cat::operator=(const Cat &rhs)
 {
 	if (this != &rhs)
 	{
-		this->type = rhs.type; //assign type member variable from the base class
+		this->type = rhs.type; //assign type member variable from base class
 		delete this->brain; //delete existing Brain object
-		this->brain = new Brain(*rhs.brain); // Create new Brain object & copy from rhs
+		this->brain = new Brain(*rhs.brain); //create a new Brain object & copy from rhs
 	}
-	std::cout << "Dog copy assignment operator activated" << std::endl;
+	std::cout << "Cat copy assignment operator activated" << std::endl;
 	return (*this);
 }
 
-Dog::~Dog()
+Cat::~Cat()
 {
-	std::cout << "Dog destructor activated" << std::endl;
-	delete (this->brain);
+	std::cout << "Cat destructor activated" << std::endl;
+	delete this->brain;
 }
 
-void	Dog::makeSound() const
+void	Cat::makeSound() const
 {
-	std::cout << "Woof Woof" << std::endl;
+	std::cout << "Meow Meow" << std::endl;
 }
 
-void	Dog::think() const
+void	Cat::think() const
 {
 	std::cout << std::endl;
 	for (int i = 0; i < 100; i++)
 		std::cout << brain->getIdea(i) << 1 + i << ' ';
 	std::cout << std::endl;
-}
-
-Brain* Dog::getBrain()
-{
-	return (this->brain);
 }

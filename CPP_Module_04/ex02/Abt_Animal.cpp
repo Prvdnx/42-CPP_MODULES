@@ -1,59 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   Abt_Animal.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:54:37 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/23 10:09:57 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "Abt_Animal.hpp"
 
-Animal::Animal()
+Abt_Animal::Abt_Animal()
 {
-	this->type = "Animal";
-	std::cout << "Animal default constructor activated" << std::endl;
+	this->type = "Abt_Animal";
+	std::cout << "Abt_Animal default constructor activated" << std::endl;
 }
 
-Animal::Animal(const Animal& other)
+Abt_Animal::Abt_Animal(const Abt_Animal& other)
 {
 	this->type = other.type;
-	std::cout << "Animal copy constructor activated" << std::endl;
+	std::cout << "Abt_Animal copy constructor activated" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &rhs)
+Abt_Animal &Abt_Animal::operator=(const Abt_Animal &rhs)
 {
 	if (this != &rhs)
 		this->type = rhs.type;
-	std::cout << "Animal copy assignment operator activated" << std::endl;
+	std::cout << "Abt_Animal copy assignment operator activated" << std::endl;
 	return (*this);
 }
 
-Animal::~Animal()
+Abt_Animal::~Abt_Animal()
 {
-	std::cout << "Animal destructor activated" << std::endl;
+	std::cout << "Abt_Animal destructor activated" << std::endl;
 }
 
-std::string	Animal::getType() const
+std::string	Abt_Animal::getType() const
 {
 	return this->type;
 }
 
-void	Animal::makeSound() const
+void	Abt_Animal::makeSound() const
 {
-	std::cout << "Yo! Animal Right Here!" << std::endl;
+	std::cout << "Yo! Abstract Animal Right Here!" << std::endl;
 }
-
-void	Animal::think() const
-{
-	std::cout << "Animal is thinking..." << std::endl;
-}
-
-
-
-
-
-

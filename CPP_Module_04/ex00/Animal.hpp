@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:16 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 03:03:31 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/23 08:42:01 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,8 @@ class Animal
 		std::string type;
 	public:
 		Animal();
-		Animal(const Animal &other); //Copy constructor
+		Animal(const Animal &other); //copy constructor
+		Animal &operator=(const Animal &rhs); //copy assignment operator
 		virtual ~Animal();
 		virtual void	makeSound() const;
 		std::string	getType() const;
