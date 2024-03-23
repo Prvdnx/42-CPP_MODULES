@@ -6,11 +6,11 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/03/11 05:34:26 by ookamonu          #+#    #+#              #
-#    Updated: 2024/03/23 20:30:40 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/03/23 20:32:37 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= AnimalBrain
+NAME	= Abt_AnimalBrain
 
 CC		= c++
 
