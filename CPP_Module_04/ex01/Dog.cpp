@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:48:55 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 02:04:02 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	Dog::makeSound() const
 
 void	Dog::think() const
 {
-	std::cout << std::endl;
+	std::cout << "\n" << "DOG-THINK!!" << std::endl;
 	for (int i = 0; i < 100; i++)
 		std::cout << brain->getIdea(i) << 1 + i << ' ';
 	std::cout << std::endl;
