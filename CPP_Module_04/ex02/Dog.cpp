@@ -57,7 +57,7 @@ void	Dog::think() const
 	std::cout << std::endl;
 }
 
-Brain* Dog::getBrain()
+Brain *Dog::getBrain()
 {
 	return (this->brain);
 }

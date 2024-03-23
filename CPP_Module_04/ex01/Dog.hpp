@@ -28,7 +28,7 @@ class Dog: public Animal
 		~Dog();
 		void	makeSound() const;
 		virtual void	think(void) const;
-		Brain* getBrain();
+		Brain *getBrain();
 };
 
 #endif
