@@ -14,7 +14,7 @@
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {
-	std::cout << "ScavTrap Constructor in Action!" << std::endl;
+	std::cout << "ScavTrap Constructor activated!" << std::endl;
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;

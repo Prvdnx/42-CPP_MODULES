@@ -14,7 +14,7 @@
 
 ClapTrap::ClapTrap(const std::string &name) : name(name), hitPoints(10), energyPoints(10), attackDamage(0)
 {
-	std::cout << "ClapTrap Constructor in Action!" << std::endl;
+	std::cout << "ClapTrap Constructor activated!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()
@@ -31,7 +31,7 @@ void ClapTrap::attack(const std::string &target)
 	}
 	if (energyPoints > 0)
 	{
-		std::cout << name << " attacks " << target << ", dealing " << attackDamage << " damage(s)!" << std::endl;
+		std::cout << name << " attacks " << target << ", causing " << attackDamage << " damage(s)!" << std::endl;
 		energyPoints--;
 		std::cout << name << " has " << energyPoints << " energy points left." << std::endl;
 	}
