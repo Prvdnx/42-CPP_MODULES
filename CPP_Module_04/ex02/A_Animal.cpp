@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 23:17:14 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/25 00:49:13 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ A_Animal::~A_Animal()
 
 std::string	A_Animal::getType() const
 {
-	return this->type;
+	return (this->type);
 }
 
 void	A_Animal::makeSound() const

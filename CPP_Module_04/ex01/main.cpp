@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 23:39:20 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/25 01:21:16 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,10 @@ int main()
 	for (int i = 2; i < 4; i++)
 		t[i] = new Cat();
 	for (int i = 0; i < 4; i++)
-	{
-		t[i]->think();
-		t[i]->makeSound();
+	{	
+    	std::cout << "\n" << t[i]->getType() << std::endl; //calls getType() on each object
+		t[i]->think(); //calls think() on each object as implemented in it's derived class
+		t[i]->makeSound(); //calls makeSound() on each object as implemented in it's derived class
 	}
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i++)

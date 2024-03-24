@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 23:33:15 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/25 00:55:48 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cat::~Cat()
 
 void	Cat::makeSound() const
 {
-	std::cout << "\nMeow Meow" << std::endl;
+	std::cout << "Meow Meow" << std::endl;
 }
 
 void	Cat::think() const
