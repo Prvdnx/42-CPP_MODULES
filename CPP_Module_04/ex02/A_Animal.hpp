@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Abt_Animal.hpp                                     :+:      :+:    :+:   */
+/*   A_Animal.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:16 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 22:05:09 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:17:05 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class A_Animal
 	public:
 		A_Animal();
 		A_Animal(const A_Animal &other); //copy constructor
-		A_Animal &operator=(const A_Animal &rhs); //copy assignment operator
+		A_Animal &operator=(const A_Animal &other); //copy assignment operator
 		virtual ~A_Animal();
 		virtual void	makeSound() const = 0;
 		std::string	getType() const;

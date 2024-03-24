@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 22:48:45 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:33:15 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Cat::Cat(const Cat &other) : A_Animal()
 	this->brain = new Brain(*(other.brain));
 }
 
-Cat &Cat::operator=(const Cat &rhs)
+Cat &Cat::operator=(const Cat &other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		this->type = rhs.type; //assign type member variable from base class
+		this->type = other.type; //assign type member variable from base class
 		delete this->brain; //delete existing Brain object
-		this->brain = new Brain(*rhs.brain); //create a new Brain object & copy from rhs
+		this->brain = new Brain(*other.brain); //create a new Brain object & copy from rhs
 	}
 	std::cout << "Cat copy assignment operator activated" << std::endl;
 	return (*this);
@@ -46,7 +46,7 @@ Cat::~Cat()
 
 void	Cat::makeSound() const
 {
-	std::cout << "\nMeow Meow\n\n" << std::endl;
+	std::cout << "\nMeow Meow" << std::endl;
 }
 
 void	Cat::think() const

@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 22:48:34 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:33:03 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ Dog::Dog(const Dog &other) : A_Animal()
 	this->brain = new Brain(*(other.brain));
 }
 
-Dog &Dog::operator=(const Dog &rhs)
+Dog &Dog::operator=(const Dog &other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
-		this->type = rhs.type; //assign type member variable from the base class
+		this->type = other.type; //assign type member variable from the base class
 		delete this->brain; //delete existing Brain object
-		this->brain = new Brain(*rhs.brain); // Create new Brain object & copy from rhs
+		this->brain = new Brain(*other.brain); // Create new Brain object & copy from rhs
 	}
 	std::cout << "Dog copy assignment operator activated" << std::endl;
 	return (*this);
@@ -46,7 +46,7 @@ Dog::~Dog()
 
 void	Dog::makeSound() const
 {
-	std::cout << "\nWoof Woof\n\n" << std::endl;
+	std::cout << "\nWoof Woof" << std::endl;
 }
 
 void	Dog::think() const

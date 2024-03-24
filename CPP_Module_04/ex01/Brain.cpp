@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 04:43:13 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:49:08 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:20:34 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ Brain::Brain(const Brain &other)
 		this->ideas[i] = other.ideas[i];
 }
 
-Brain& Brain::operator=(Brain& rhs)
+Brain &Brain::operator=(Brain &other)
 {
-	if (this != &rhs)
+	if (this != &other)
 	{
 		delete[] this->ideas;
 		this->ideas = new std::string[100];
 		for (int i = 0; i < 100; i++)
-			this->ideas[i] = rhs.ideas[i];
+			this->ideas[i] = other.ideas[i];
 	}
 	std::cout << "Brain assignment operator activated" << std::endl;
 	return *this;

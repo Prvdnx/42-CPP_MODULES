@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:47:34 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:23:56 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ Animal::Animal(const Animal &other)
 	std::cout << "Animal copy constructor activated" << std::endl;
 }
 
-Animal &Animal::operator=(const Animal &rhs)
+Animal &Animal::operator=(const Animal &other)
 {
-	if (this != &rhs)
-		this->type = rhs.type;
+	if (this != &other)
+		this->type = other.type;
 	std::cout << "Animal copy assignment operator activated" << std::endl;
 	return (*this);
 }

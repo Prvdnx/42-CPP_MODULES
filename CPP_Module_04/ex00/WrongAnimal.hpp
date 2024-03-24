@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:28:02 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 08:53:57 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:22:05 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class WrongAnimal
 	public:
 		WrongAnimal();
 		WrongAnimal(const WrongAnimal &other); // Copy constructor
-		WrongAnimal &operator=(const WrongAnimal &rhs);
+		WrongAnimal &operator=(const WrongAnimal &other);
 		virtual ~WrongAnimal();
 		void	makeSound() const;
 		std::string	getType() const;

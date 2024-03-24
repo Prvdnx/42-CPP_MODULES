@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:33 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:22:48 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:13:22 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Dog: public Animal
 	public:
 		Dog();
 		Dog(const Dog &other); //Copy constructor
-	    Dog &operator=(const Dog &rhs); //copy assignment operator
+	    Dog &operator=(const Dog &other); //copy assignment operator
 		~Dog();
 		void	makeSound() const;
 		virtual void	think(void) const;

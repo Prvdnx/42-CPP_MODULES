@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:48:05 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:22:28 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ WrongAnimal::WrongAnimal(const WrongAnimal &other)
 	std::cout << "WrongAnimal copy constructor activated" << std::endl;
 }
 
-WrongAnimal &WrongAnimal::operator=(const WrongAnimal &rhs)
+WrongAnimal &WrongAnimal::operator=(const WrongAnimal &other)
 {
-    if (this != &rhs)
-        this->type = rhs.type;
+    if (this != &other)
+        this->type = other.type;
     std::cout << "WrongAnimal copy assignment operator activated" << std::endl;
     return (*this);
 }
@@ -44,5 +44,5 @@ std::string WrongAnimal::getType() const
 
 void WrongAnimal::makeSound() const
 {
-	std::cout << "MooO MooO" << std::endl;
+	std::cout << "WrongAnimal - MooO MooO" << std::endl;
 }

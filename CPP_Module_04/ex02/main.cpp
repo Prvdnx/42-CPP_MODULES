@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 22:43:08 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:29:54 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main()
 		t[i] = new Cat();
 	for (int i = 0; i < 4; i++)
 	{
-		t[i]->getType();
 		t[i]->makeSound(); 	//polymorphism by calling makeSound() on each object
 	}
 	std::cout << std::endl;

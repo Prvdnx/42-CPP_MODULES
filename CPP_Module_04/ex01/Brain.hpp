@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 04:44:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:15:54 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 23:13:59 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Brain
 	public:
 		Brain();
 		Brain(const Brain &other); //copy constructor
-		Brain &operator=(Brain &rhs);
+		Brain &operator=(Brain &other);
 		~Brain();
 		std::string	getIdea(int index);
 		void    setIdea(std::string idea, int index);
