@@ -6,20 +6,20 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 02:03:56 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:48:45 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Abt_Animal()
+Cat::Cat() : A_Animal()
 {
-	this->type = "Cat";
+	this->type = "CAT";
 	std::cout << "Cat default constructor activated" << std::endl;
 	this->brain = new Brain();
 }
 
-Cat::Cat(const Cat &other) : Abt_Animal()
+Cat::Cat(const Cat &other) : A_Animal()
 {
 	std::cout << "Cat copy constructor activated" << std::endl;
 	this->type = other.type;
@@ -46,7 +46,7 @@ Cat::~Cat()
 
 void	Cat::makeSound() const
 {
-	std::cout << "Meow Meow" << std::endl;
+	std::cout << "\nMeow Meow\n\n" << std::endl;
 }
 
 void	Cat::think() const
@@ -55,4 +55,9 @@ void	Cat::think() const
 	for (int i = 0; i < 100; i++)
 		std::cout << brain->getIdea(i) << 1 + i << ' ';
 	std::cout << std::endl;
+}
+
+Brain *Cat::getBrain()
+{
+	return (this->brain);
 }

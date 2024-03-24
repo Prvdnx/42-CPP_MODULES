@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/22 20:51:04 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:43:20 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,25 @@ int main()
 	for (int i = 2; i < 4; i++)
 		t[i] = new Cat();
 	for (int i = 0; i < 4; i++)
+	{
+		t[i]->getType();
 		t[i]->think();
+		t[i]->makeSound();
+	}
 	std::cout << std::endl;
 	for (int i = 0; i < 4; i++)
 		delete t[i];
 	std::cout << std::endl;
 	
-	Dog	basic;
-	Dog copy = basic;
+	Dog	dog1;
+	Dog dog2 = dog1;
+	Dog copy;
+	copy = dog1;
 	for (int i = 0; i < 100; i++)
-		basic.getBrain()->setIdea(" New_thought_", i);
-			
-	basic.think();
-	std::cout << "\nInitial copy: " << copy.getBrain()->getIdea(0) << std::endl;
+		dog1.getBrain()->setIdea(" New_thought_", i); //modify brain idea
+	dog1.think();
+
+	std::cout << "\nInitial brain idea copy: " << copy.getBrain()->getIdea(0) << std::endl; //check brain copy idea
 	std::cout << std::endl;
 
 	return (0);

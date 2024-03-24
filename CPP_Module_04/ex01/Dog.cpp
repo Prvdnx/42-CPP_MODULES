@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 02:04:02 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:46:38 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Dog::Dog() : Animal()
 {
-	this->type = "Dog";
+	this->type = "DOG";
 	std::cout << "Dog default constructor activated" << std::endl;
 	this->brain = new Brain();
 }
@@ -46,7 +46,7 @@ Dog::~Dog()
 
 void	Dog::makeSound() const
 {
-	std::cout << "Woof Woof" << std::endl;
+	std::cout << "\nWoof Woof\n\n" << std::endl;
 }
 
 void	Dog::think() const

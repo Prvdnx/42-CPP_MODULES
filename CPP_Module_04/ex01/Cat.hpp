@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 09:32:53 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:09:45 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ class Cat: public Animal
 		~Cat();
 		void	makeSound() const;
 		virtual void	think(void) const;
+		Brain *getBrain();
 };
 
 #endif

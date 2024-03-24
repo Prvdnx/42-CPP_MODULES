@@ -6,20 +6,20 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:19 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 02:03:59 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:48:34 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Abt_Animal()
+Dog::Dog() : A_Animal()
 {
 	this->type = "Dog";
 	std::cout << "Dog default constructor activated" << std::endl;
 	this->brain = new Brain();
 }
 
-Dog::Dog(const Dog &other) : Abt_Animal()
+Dog::Dog(const Dog &other) : A_Animal()
 {
 	std::cout << "Dog copy constructor activated" << std::endl;
 	this->type = other.type;
@@ -46,7 +46,7 @@ Dog::~Dog()
 
 void	Dog::makeSound() const
 {
-	std::cout << "Woof Woof" << std::endl;
+	std::cout << "\nWoof Woof\n\n" << std::endl;
 }
 
 void	Dog::think() const
@@ -57,7 +57,7 @@ void	Dog::think() const
 	std::cout << std::endl;
 }
 
-Brain* Dog::getBrain()
+Brain *Dog::getBrain()
 {
 	return (this->brain);
 }

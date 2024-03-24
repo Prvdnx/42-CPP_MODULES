@@ -6,18 +6,18 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:52 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 10:11:47 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:11:35 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Abt_Animal.hpp"
+# include "A_Animal.hpp"
 # include "Brain.hpp"
 # include <iostream>
 
-class Cat: public Abt_Animal
+class Cat: public A_Animal
 {
 	private:
 		Brain *brain;
@@ -28,6 +28,7 @@ class Cat: public Abt_Animal
 		~Cat();
 		void	makeSound() const;
 		virtual void	think(void) const;
+		Brain *getBrain();
 };
 
 #endif

@@ -6,25 +6,25 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:16 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/23 10:10:29 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/03/24 22:05:09 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ABT_ANIMAL_HPP
-# define ABT_ANIMAL_HPP
+#ifndef A_ANIMAL_HPP
+# define A_ANIMAL_HPP
 
 # include <string>
 # include <iostream>
 
-class Abt_Animal
+class A_Animal
 {
 	protected:
 		std::string type;
 	public:
-		Abt_Animal();
-		Abt_Animal(const Abt_Animal &other); //copy constructor
-		Abt_Animal &operator=(const Abt_Animal &rhs); //copy assignment operator
-		virtual ~Abt_Animal();
+		A_Animal();
+		A_Animal(const A_Animal &other); //copy constructor
+		A_Animal &operator=(const A_Animal &rhs); //copy assignment operator
+		virtual ~A_Animal();
 		virtual void	makeSound() const = 0;
 		std::string	getType() const;
 };
