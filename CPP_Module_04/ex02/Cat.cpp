@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:26:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/25 00:55:48 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/04/10 04:23:02 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cat &Cat::operator=(const Cat &other)
 	{
 		this->type = other.type; //assign type member variable from base class
 		delete this->brain; //delete existing Brain object
-		this->brain = new Brain(*other.brain); //create a new Brain object & copy from rhs
+		this->brain = new Brain(*other.brain); //create a new Brain object & copy from other
 	}
 	std::cout << "Cat copy assignment operator activated" << std::endl;
 	return (*this);
