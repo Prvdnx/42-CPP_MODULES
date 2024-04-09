@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:25:53 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 23:21:05 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/04/10 04:19:41 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,3 @@ void	Animal::think() const
 {
 	std::cout << "Animal is thinking..." << std::endl;
 }
-
-
-
-
-
-
