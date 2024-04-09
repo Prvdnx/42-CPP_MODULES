@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/22 01:27:45 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/03/24 23:05:49 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/04/10 04:18:41 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main()
     std::cout << std::endl;
 
     const WrongAnimal *w = new WrongAnimal();
-    const WrongCat *wc = new WrongCat();
+    const WrongAnimal *wc = new WrongCat();
     std::cout << std::endl;
 
     std::cout << w->getType() << " " << std::endl;
