@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/04 01:26:05 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/04 02:02:29 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ bool BitcoinExchange::validateDate(const std::string &s)
 {
 	const char	*format = "%Y-%m-%d";
 	struct tm	tp;
+	
 	return strptime(s.c_str(), format, &tp) != NULL && std::isdigit(s.back());
 }
 
