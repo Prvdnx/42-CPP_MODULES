@@ -6,30 +6,31 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/01 06:58:28 by ookamonu          #+#    #+#              #
-#    Updated: 2024/05/01 07:26:26 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/05/04 06:14:03 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = RPN
+NAME	= RPN
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CC		= c++
 
-SRC = main.cpp	RPN.cpp
+CFLAGS	= -std=c++98 -Wextra -Werror -Wall
 
-OBJ = $(SRC:.cpp=.o)
+SRCS	= main.cpp	RPN.cpp
 
-all: $(NAME)
+OBJS	= $(SRCS:.cpp=.o)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) $(LDFLAGS) -o $(NAME)
+all:$(NAME)
 
-clean:
-	$(RM) $(OBJ)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+clean: 
+	rm -f $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm $(NAME)
 
-re:: fclean
-re:: all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean re fclean

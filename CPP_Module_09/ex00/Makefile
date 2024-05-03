@@ -6,30 +6,31 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/01 06:28:28 by ookamonu          #+#    #+#              #
-#    Updated: 2024/05/01 06:28:31 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/05/04 06:13:52 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = btc
+NAME	= btc
 
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+CC		= c++
 
-SRC = main.cpp	btcExchange.cpp
+CFLAGS	= -std=c++98 -Wextra -Werror -Wall
 
-OBJ = $(SRC:.cpp=.o)
+SRCS	= main.cpp	btcExchange.cpp
 
-all: $(NAME)
+OBJS	= $(SRCS:.cpp=.o)
 
-$(NAME): $(OBJ)
-	$(CXX) $(CXXFLAGS) $(OBJ) $(LDFLAGS) -o $(NAME)
+all:$(NAME)
 
-clean:
-	$(RM) $(OBJ)
+$(NAME): $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+clean: 
+	rm -f $(OBJS)
 
 fclean: clean
-	$(RM) $(NAME)
+	rm $(NAME)
 
-re:: fclean
-re:: all
+re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: clean re fclean
