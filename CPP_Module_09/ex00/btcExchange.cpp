@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/04 02:02:29 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/04 02:24:45 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ bool BitcoinExchange::validateDate(const std::string &s)
 	const char	*format = "%Y-%m-%d";
 	struct tm	tp;
 	
-	return strptime(s.c_str(), format, &tp) != NULL && std::isdigit(s.back());
+	return (strptime(s.c_str(), format, &tp) != NULL && std::isdigit(s[s.size() - 1]));
 }
 
 static void	trimFrontBack(std::string &s)
@@ -61,9 +61,9 @@ float	BitcoinExchange::getValue(const std::string &s, char delimiter)
 	size_t delimiterPos = s.find(delimiter);
     if (delimiterPos == std::string::npos || delimiterPos == s.length() - 1)
         throw std::runtime_error("Error: no value after delimiter");
-
-	//return (std::stof(s.substr(s.find(delimiter) + 1)));
-	return static_cast<float>(std::atof(s.substr(delimiterPos + 1).c_str()));
+	else
+		//return (std::stof(s.substr(s.find(delimiter) + 1)));
+		return static_cast<float>(std::atof(s.substr(delimiterPos + 1).c_str()));
 }
 
 void	BitcoinExchange::solve(const std::string &arg)
