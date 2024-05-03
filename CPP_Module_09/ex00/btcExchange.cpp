@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/03 23:56:18 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/04 01:26:05 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include	<fstream>
 #include	<iostream>
 #include	<stdexcept>
+#include	<cstdlib>
+#include	<cctype>
+#include	<ctime>
 
 BitcoinExchange::BitcoinExchange() {} // default constructor. Doesn't perform any specific initialization.
 BitcoinExchange::~BitcoinExchange() {} // destructor for cleaning up resources when object of the class is destroyed. It's empty.
@@ -58,7 +61,8 @@ float	BitcoinExchange::getValue(const std::string &s, char delimiter)
     if (delimiterPos == std::string::npos || delimiterPos == s.length() - 1)
         throw std::runtime_error("Error: no value after delimiter");
 
-	return (std::stof(s.substr(s.find(delimiter) + 1)));
+	//return (std::stof(s.substr(s.find(delimiter) + 1)));
+	return static_cast<float>(std::atof(s.substr(delimiterPos + 1).c_str()));
 }
 
 void	BitcoinExchange::solve(const std::string &arg)
@@ -80,7 +84,7 @@ void	BitcoinExchange::solve(const std::string &arg)
 			_map[key] = getValue(line, ',');
 	}
 
-	std::ifstream inputFile(arg);
+	std::ifstream inputFile(arg.c_str());
 	if (!inputFile.is_open())
 		throw std::runtime_error("Error: cannot open " + arg);
 
