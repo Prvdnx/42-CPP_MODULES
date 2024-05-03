@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:54:28 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/03 22:41:27 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/04 00:56:29 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include	<stdexcept>
 #include	<sstream>
 #include	<iostream>
+#include	<cstdlib>
 
 RPN::RPN() {}
 RPN::~RPN() {}
@@ -40,7 +41,12 @@ void	RPN::parse(const std::string &input)
 	{
 		if (isdigit(token[0]))	// if token is a digit, push it onto the stack
 		{
-			_stack.push(std::stoi(token));
+			// std::istringstream	convert(token);
+			// int	num;
+			// if (!(convert >> num))
+			//		throw std::runtime_error("Error: invalid token");
+			// _stack.push(num);
+			_stack.push(atoi(token.c_str()));
 		}
 		else if (token == "+" || token == "-" || token == "*" || token == "/")	// if token is an operator, do these operations
 		{
