@@ -109,6 +109,6 @@ void	BitcoinExchange::solve(const std::string &arg)
 				std::cout << "Error: not a positive number.\n";
 		}
 		else
-			std::cout << "Error: bad input\n";
+			std::cout << "Error: bad input => " << key << '\n';
 	}
 }
