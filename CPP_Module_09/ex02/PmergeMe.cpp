@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 05:11:21 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 05:04:50 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 05:16:34 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void	PmergeMe::_mergeInsertionSortVector(int start, int end)
 	{
 		if (end - start <= 20)
 		{
-			for (int i = start + 1; i <= end; ++i)
+			for (int i = start + 1; i <= end; i++)
 			{
 				int key = _vec[i];
 				int j = i - 1;
@@ -122,7 +122,7 @@ void	PmergeMe::_mergeInsertionSortDeque(int start, int end)
 	{
 		if (end - start <= 20)
 		{
-			for (int i = start + 1; i <= end; ++i)
+			for (int i = start + 1; i <= end; i++)
 			{
 				int key = _deq[i];
 				int j = i - 1;
