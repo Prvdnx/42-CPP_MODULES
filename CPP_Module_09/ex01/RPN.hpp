@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:55:06 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 03:13:30 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 04:20:27 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 class	RPN
 {
 	private:
-		std::stack<int> _stack;
+		std::stack<int>	_stack;
 
 	public:
 		RPN();

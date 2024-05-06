@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 05:11:21 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/06 06:57:30 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 04:47:09 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 PmergeMe::PmergeMe() : _vecTime(0.0), _deqTime(0.0) {}
 
-PmergeMe::PmergeMe(int argc, char *argv[]) : _vecTime(0.0), _deqTime(0.0)
+PmergeMe::PmergeMe(char *argv[]) : _vecTime(0.0), _deqTime(0.0)
 {
-	argv[argc] = NULL;
-	_addNumbers(argv + 1);
+	_fillContainers(argv);
 }
 
 PmergeMe::PmergeMe(const PmergeMe &src)
@@ -49,7 +48,7 @@ std::deque<int>	PmergeMe::getDeque(void) const
 	return (this->_deq);
 }
 
-void	PmergeMe::_addNumbers(char *argv[])
+void	PmergeMe::_fillContainers(char *argv[])
 {
 	for (int i = 0; argv[i]; i++)
 	{

@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 06:37:04 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/06 06:55:48 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 04:46:09 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char *argv[])
 
 	try
 	{
-		PmergeMe nums = PmergeMe(argc, argv);
+		PmergeMe nums = PmergeMe(argv + 1);
 		std::cout << "Before: ";
 		if (nums.getVector().size() > 5)
 		{

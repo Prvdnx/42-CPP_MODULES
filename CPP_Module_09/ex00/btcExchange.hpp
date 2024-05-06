@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 03:10:14 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 04:20:54 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class	BitcoinExchange
 		void	solve(const std::string &arg);
 
 	private:
-		std::map<std::string, double> _map;
+		std::map<std::string, double>	_map;
 
 		static bool			validateDate(const std::string &s);
 		static std::string	getKey(const std::string &s);
