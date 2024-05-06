@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 05:11:21 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 05:16:34 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 05:45:44 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,41 @@ void	PmergeMe::printDequeResult() const
 	std::cout << std::fixed << _deqTime * 1000000 << " us" << std::endl;
 }
 
+void	PmergeMe::_merge(std::vector<int> &arr, int start, int mid, int end)
+{
+	std::vector<int> temp(end - start + 1);
+	int i = start, j = mid + 1, k = 0;
+
+	while (i <= mid && j <= end)
+		temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
+
+	while (i <= mid)
+		temp[k++] = arr[i++];
+
+	while (j <= end)
+		temp[k++] = arr[j++];
+
+	std::copy(temp.begin(), temp.end(), arr.begin() + start);
+}
+
+void	PmergeMe::_merge(std::deque<int> &arr, int start, int mid, int end)
+{
+	std::deque<int> temp(end - start + 1);
+	int i = start, j = mid + 1, k = 0;
+
+	while (i <= mid && j <= end)
+		temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
+
+	while (i <= mid)
+		temp[k++] = arr[i++];
+
+	while (j <= end)
+		temp[k++] = arr[j++];
+
+	for (int l = 0; l < k; l++)
+		arr[start + l] = temp[l];
+}
+
 void	PmergeMe::_mergeInsertionSortVector(int start, int end)
 {
 	if (start < end)
@@ -142,41 +177,6 @@ void	PmergeMe::_mergeInsertionSortDeque(int start, int end)
 			_merge(_deq, start, mid, end);
 		}
 	}
-}
-
-void	PmergeMe::_merge(std::vector<int> &arr, int start, int mid, int end)
-{
-	std::vector<int> temp(end - start + 1);
-	int i = start, j = mid + 1, k = 0;
-
-	while (i <= mid && j <= end)
-		temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
-
-	while (i <= mid)
-		temp[k++] = arr[i++];
-
-	while (j <= end)
-		temp[k++] = arr[j++];
-
-	std::copy(temp.begin(), temp.end(), arr.begin() + start);
-}
-
-void	PmergeMe::_merge(std::deque<int> &arr, int start, int mid, int end)
-{
-	std::deque<int> temp(end - start + 1);
-	int i = start, j = mid + 1, k = 0;
-
-	while (i <= mid && j <= end)
-		temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
-
-	while (i <= mid)
-		temp[k++] = arr[i++];
-
-	while (j <= end)
-		temp[k++] = arr[j++];
-
-	for (int l = 0; l < k; l++)
-		arr[start + l] = temp[l];
 }
 
 // ./PmergeMe `shuf -i 1-100000 -n 3000 | tr "\n" " "`
