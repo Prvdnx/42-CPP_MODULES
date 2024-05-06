@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:55:06 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/03 23:58:24 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 03:10:55 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,19 @@
 #include	<stack>
 #include	<string>
 
-class RPN
+class	RPN
 {
-private:
-	std::stack<int> _stack;
+	private:
+		std::stack<int> _stack;
 
-public:
-	RPN();
-	RPN(const RPN &name);
-	RPN &operator=(const RPN &other);
-	~RPN();
+	public:
+		RPN();
+		RPN(const RPN &name);
+		RPN &operator=(const RPN &other);
+		~RPN();
 
-	void	parse(const std::string &input);
-	void	operate();
+		void	parse(const std::string &input);
+		void	operate();
 };
 
 #endif
