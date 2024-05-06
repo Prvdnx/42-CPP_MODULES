@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:54:28 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/04 03:26:29 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 04:53:03 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	RPN::parse(const std::string &input)
 			// _stack.push(num);
 			_stack.push(atoi(token.c_str()));
 		}
-		else if (token == "+" || token == "-" || token == "*" || token == "/")	// if token is an operator, do these operations
+		else if (token == "+" || token == "-" || token == "*" || token == "/")	// if token is an operator, do these
 		{
 			if (_stack.size() < 2)	// check if there are enough operands on stack for the operation
 				throw std::runtime_error("Error: invalid expression");
