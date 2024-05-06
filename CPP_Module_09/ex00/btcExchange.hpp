@@ -6,12 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 02:59:26 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 03:06:13 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef	__BTC_EXCHANGE_HPP__
-#define	__BTC_EXCHANGE_HPP__
+#ifndef	BTC_EXCHANGE_HPP
+#define	BTC_EXCHANGE_HPP
 
 #include	<map>
 #include	<string>
