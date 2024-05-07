@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 05:11:21 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 05:45:44 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/07 07:13:59 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,62 @@ void	PmergeMe::printDequeResult() const
 	std::cout << std::fixed << _deqTime * 1000000 << " us" << std::endl;
 }
 
+void	PmergeMe::_mergeInsertionSortVector(int start, int end)
+{
+	if (start < end)
+	{
+		if (end - start <= 20)
+		{
+			for (int i = start + 1; i <= end; i++)
+			{
+				int key = _vec[i];
+				int j = i - 1;
+				while (j >= start && _vec[j] > key)
+				{
+					_vec[j + 1] = _vec[j];
+					--j;
+				}
+				_vec[j + 1] = key;
+			}
+		}
+		else
+		{
+			int mid = (start + end) / 2;
+			_mergeInsertionSortVector(start, mid);
+			_mergeInsertionSortVector(mid + 1, end);
+			_merge(_vec, start, mid, end);
+		}
+	}
+}
+
+void	PmergeMe::_mergeInsertionSortDeque(int start, int end)
+{
+	if (start < end)
+	{
+		if (end - start <= 20)
+		{
+			for (int i = start + 1; i <= end; i++)
+			{
+				int key = _deq[i];
+				int j = i - 1;
+				while (j >= start && _deq[j] > key)
+				{
+					_deq[j + 1] = _deq[j];
+					--j;
+				}
+				_deq[j + 1] = key;
+			}
+		}
+		else
+		{
+			int mid = (start + end) / 2;
+			_mergeInsertionSortDeque(start, mid);
+			_mergeInsertionSortDeque(mid + 1, end);
+			_merge(_deq, start, mid, end);
+		}
+	}
+}
+
 void	PmergeMe::_merge(std::vector<int> &arr, int start, int mid, int end)
 {
 	std::vector<int> temp(end - start + 1);
@@ -121,62 +177,6 @@ void	PmergeMe::_merge(std::deque<int> &arr, int start, int mid, int end)
 
 	for (int l = 0; l < k; l++)
 		arr[start + l] = temp[l];
-}
-
-void	PmergeMe::_mergeInsertionSortVector(int start, int end)
-{
-	if (start < end)
-	{
-		if (end - start <= 20)
-		{
-			for (int i = start + 1; i <= end; i++)
-			{
-				int key = _vec[i];
-				int j = i - 1;
-				while (j >= start && _vec[j] > key)
-				{
-					_vec[j + 1] = _vec[j];
-					--j;
-				}
-				_vec[j + 1] = key;
-			}
-		}
-		else
-		{
-			int mid = start + (end - start) / 2;
-			_mergeInsertionSortVector(start, mid);
-			_mergeInsertionSortVector(mid + 1, end);
-			_merge(_vec, start, mid, end);
-		}
-	}
-}
-
-void	PmergeMe::_mergeInsertionSortDeque(int start, int end)
-{
-	if (start < end)
-	{
-		if (end - start <= 20)
-		{
-			for (int i = start + 1; i <= end; i++)
-			{
-				int key = _deq[i];
-				int j = i - 1;
-				while (j >= start && _deq[j] > key)
-				{
-					_deq[j + 1] = _deq[j];
-					--j;
-				}
-				_deq[j + 1] = key;
-			}
-		}
-		else
-		{
-			int mid = start + (end - start) / 2;
-			_mergeInsertionSortDeque(start, mid);
-			_mergeInsertionSortDeque(mid + 1, end);
-			_merge(_deq, start, mid, end);
-		}
-	}
 }
 
 // ./PmergeMe `shuf -i 1-100000 -n 3000 | tr "\n" " "`
