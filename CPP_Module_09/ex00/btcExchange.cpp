@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/04 04:24:45 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/10 23:50:22 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 #include	<cctype>
 #include	<ctime>
 
-BitcoinExchange::BitcoinExchange() {} // default constructor. Doesn't perform any specific initialization.
-BitcoinExchange::~BitcoinExchange() {} // destructor for cleaning up resources when object of the class is destroyed. It's empty.
+BitcoinExchange::BitcoinExchange() {} // default constructor, no initialization
+BitcoinExchange::~BitcoinExchange() {} // destructor for cleaning up; empty
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &name)
 {
