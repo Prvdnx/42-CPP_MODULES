@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 05:11:21 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/07 07:13:59 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/10 22:40:45 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,15 +150,18 @@ void	PmergeMe::_merge(std::vector<int> &arr, int start, int mid, int end)
 	int i = start, j = mid + 1, k = 0;
 
 	while (i <= mid && j <= end)
-		temp[k++] = arr[i] <= arr[j] ? arr[i++] : arr[j++];
+		if (arr[i] <= arr[j])	// compare elements in array & copy smaller to temp
+			temp[k++] = arr[i++];
+		else
+			temp[k++] = arr[j++];
 
-	while (i <= mid)
+	while (i <= mid)	// copy any remaining elements from the left
 		temp[k++] = arr[i++];
 
-	while (j <= end)
+	while (j <= end)	// copy any remaining elements from the right
 		temp[k++] = arr[j++];
 
-	std::copy(temp.begin(), temp.end(), arr.begin() + start);
+	std::copy(temp.begin(), temp.end(), arr.begin() + start);	// copy sorted elements from temp to original arr
 }
 
 void	PmergeMe::_merge(std::deque<int> &arr, int start, int mid, int end)
@@ -176,8 +179,8 @@ void	PmergeMe::_merge(std::deque<int> &arr, int start, int mid, int end)
 		temp[k++] = arr[j++];
 
 	for (int l = 0; l < k; l++)
-		arr[start + l] = temp[l];
+		arr[start + l] = temp[l];	// copy sorted elements from temp to original arr
 }
 
 // ./PmergeMe `shuf -i 1-100000 -n 3000 | tr "\n" " "`
-// ./PmergeMe `jot -r 3000 1 100000 | tr "\n" " "`
+// ./PmergeMe `jot -r 3000 1 100000 | tr "\n" " "` srts 030
