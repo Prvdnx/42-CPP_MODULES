@@ -6,20 +6,19 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/10 23:50:22 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/11 04:49:41 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"btcExchange.hpp"
 #include	<fstream>
 #include	<iostream>
-#include	<stdexcept>
 #include	<cstdlib>
 #include	<cctype>
 #include	<ctime>
 
 BitcoinExchange::BitcoinExchange() {} // default constructor, no initialization
-BitcoinExchange::~BitcoinExchange() {} // destructor for cleaning up; empty
+BitcoinExchange::~BitcoinExchange() {} // destructor
 
 BitcoinExchange::BitcoinExchange(const BitcoinExchange &name)
 {
@@ -37,7 +36,7 @@ bool BitcoinExchange::validateDate(const std::string &s)
 {
 	const char	*format = "%Y-%m-%d";
 	struct tm	tp;
-	
+			// using string parse time to parse s into tp in "format" format
 	return (strptime(s.c_str(), format, &tp) != NULL && std::isdigit(s[s.size() - 1]));
 }
 
@@ -68,7 +67,7 @@ float	BitcoinExchange::getValue(const std::string &s, char delimiter)
 
 void	BitcoinExchange::solve(const std::string &arg)
 {
-	std::ifstream dataFile("./data.csv"); //creates input file stream object dataFile to open file "./data.csv"
+	std::ifstream dataFile("./data.csv"); // creates input file stream object to open file "./data.csv"
 	if (!dataFile.is_open())
 	{
 		std::cerr << "Error: could not open file." << std::endl;
