@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/11 04:49:41 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/12 08:55:39 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ bool BitcoinExchange::validateDate(const std::string &s)
 	return (strptime(s.c_str(), format, &tp) != NULL && std::isdigit(s[s.size() - 1]));
 }
 
-static void	trimFrontBack(std::string &s)
+void	trimFrontBack(std::string &s)
 {
 	s.erase(s.find_last_not_of(' ') + 1);
 	s.erase(0, s.find_first_not_of(' '));
