@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 06:54:28 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/05/13 06:44:39 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/05/13 23:38:32 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	RPN::parse(const std::string &input)
 	std::istringstream	iss(input);
 	std::string			token;
 
-	while (iss >> token)	// parse input string token by token using the stream extractor (boolean)
+	while (iss >> token)	// parse input string token by token using the stream extractor (returns a boolean)
 	{
 		if (isdigit(token[0]))	// if token is a digit, push it onto the stack
 		{
