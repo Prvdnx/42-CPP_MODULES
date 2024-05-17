@@ -1,14 +1,13 @@
 #include	<stdio.h>
-#include	<stdlib.h>
 
 #define SIZE 45
-
 
 void	mergeInsertionSortVector(int *arr, int start, int end);
 void	merge(int *arr, int start, int mid, int end);
 
 int	main()
 {
+	//! showMemory(start=65520)
 	//! showArray(arr, cursors[i])
 	int	arr[SIZE] = {22, 45, 12, 8, 10, 6, 72, 81, 33, 15, 17, 30, 24, 50, 5, 19, 20, 4, 60, 25, 16, 28, 40, 11, 38, 9, 7, 14, 32, 18, 13, 35, 26, 27, 21, 36, 3, 55, 29, 23, 2, 42, 31, 1, 37};
 
@@ -57,6 +56,7 @@ void	mergeInsertionSortVector(int *arr, int start, int end)
 
 void	merge(int *arr, int start, int mid, int end)
 {
+	//! showArray(temp, cursors[i])
 	int	temp[end - start + 1];
 	int	i = start, j = mid + 1, k = 0;
 
