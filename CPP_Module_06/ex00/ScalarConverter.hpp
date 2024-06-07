@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/06 00:55:37 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/07 19:32:35 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class	ScalarConverter
 	private:
 		ScalarConverter();
 		ScalarConverter(const ScalarConverter &src);
-		ScalarConverter &operator=(const ScalarConverter &other);
+		ScalarConverter &operator=(const ScalarConverter &);
 		~ScalarConverter();
 
 	public:

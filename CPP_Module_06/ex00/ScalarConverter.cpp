@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/06 00:56:13 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/07 19:32:57 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ ScalarConverter::ScalarConverter() {}
 
 ScalarConverter::ScalarConverter(const ScalarConverter &src) { *this = src; }
 
-ScalarConverter &ScalarConverter::operator=(const ScalarConverter &other) { return (*this); }
+ScalarConverter &ScalarConverter::operator=(const ScalarConverter &) { return (*this); }
 
 ScalarConverter::~ScalarConverter() {}
 
