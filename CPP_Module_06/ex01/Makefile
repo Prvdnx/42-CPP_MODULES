@@ -6,7 +6,7 @@
 #    By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/01 06:28:28 by ookamonu          #+#    #+#              #
-#    Updated: 2024/06/04 04:19:44 by ookamonu         ###   ########.fr        #
+#    Updated: 2024/06/07 18:41:22 by ookamonu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,9 @@ all:$(NAME)
 
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+
+%.o: %.cpp $(HEADER)
+	$(CC) -c $(CFLAGS) $< -o $@
 
 clean: 
 	rm -f $(OBJS)
