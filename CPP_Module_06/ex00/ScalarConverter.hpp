@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/07 19:32:35 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/07 19:57:07 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ class	ScalarConverter
 	void	convertToChar(double value);
 	void	convertToInt(double value);
 	void	convertToFloat(double value);
+	double	toDouble(const std::string &literal);
 
 #endif
 
@@ -51,7 +52,7 @@ class	ScalarConverter
 // 		static void convertToChar(double value);
 // 		static void convertToInt(double value);
 // 		static void convertToFloat(double value);
-		
+//		double	toDouble(const std::string &literal);	
 // 	public:
 // 		static void convert(const std::string &literal);
 // };

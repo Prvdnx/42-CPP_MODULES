@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/07 19:32:57 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/07 20:17:03 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,13 @@ void	ScalarConverter::convert(const std::string &literal)
 		return;
 	}
 
-	try
+	// number = toDouble(literal);
+	std::istringstream iss(literal);
+	iss >> number;
+	if (iss.fail())
 	{
-		number = std::stod(literal);	// convert input string "literal" to a double
-	}
-	catch (const std::invalid_argument &)
-	{
-		std::cout << "Invalid Input!🛑" << std::endl;
-		return;
+		std::cerr << "Invalid Input!🛑" << std::endl;
+		exit(1);
 	}
 
 	convertToChar(number);
