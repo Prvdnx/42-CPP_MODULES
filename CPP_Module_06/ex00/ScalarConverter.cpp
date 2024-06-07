@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/07 20:17:03 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/07 20:21:50 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void	ScalarConverter::convert(const std::string &literal)
 		return;
 	}
 
-	// number = toDouble(literal);
 	std::istringstream iss(literal);
 	iss >> number;
 	if (iss.fail())
