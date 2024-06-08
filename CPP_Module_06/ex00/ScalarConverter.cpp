@@ -6,12 +6,13 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/08 21:02:39 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 21:21:54 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 #include <limits>
+// #include <string>
 
 ScalarConverter::ScalarConverter() {}
 
@@ -89,8 +90,8 @@ double	toDouble(std::string &literal)
 	if (literal == "nan" || literal == "nanf")
 		return (std::numeric_limits<double>::quiet_NaN()); // returns rep. of a quiet NaN (Not a Number)
 
-	if (literal.back() == 'f')
-		literal.pop_back(); // if string ends with 'f' or 'F' remove it
+	if (literal[literal.length() - 1] == 'f')
+		literal.erase(literal.length() - 1); // remove last character if it's 'f'
 
 	std::istringstream iss(literal);
 	double	result;
