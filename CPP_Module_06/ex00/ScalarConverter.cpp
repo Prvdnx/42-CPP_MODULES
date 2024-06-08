@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/08 21:21:54 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 21:27:10 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	ScalarConverter::convert(const std::string &literal)
 	
 	std::string newLiteral = literal;
 	number = toDouble(newLiteral);
-	// number = std::stod(number);
+	// number = std::stod(literal);
 	
 	convertToChar(number);
 	convertToInt(number);
