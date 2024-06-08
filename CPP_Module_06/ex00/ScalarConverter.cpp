@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/08 20:39:07 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 21:02:39 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ void	convertToFloat(double value)
 		std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
 }
 
+// double	ScalarConverter::toDouble(std::string &literal)
 double	toDouble(std::string &literal)
 {
 	if (literal == "inf" || literal == "+inf" || literal == "inff" || literal == "+inff")
