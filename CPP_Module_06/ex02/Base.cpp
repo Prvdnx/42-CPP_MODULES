@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/05 19:36:17 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 20:47:38 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,12 +43,5 @@ void	identify(Base *p)
 
 void	identify(Base &p)
 {
-	try
-	{
-		identify(&p); // use first version of identify
-	}
-	catch (std::bad_cast &e)
-	{
-		std::cout << "Object type Unknown!" << std::endl;
-	}
+	identify(&p); // use first version of identify
 }

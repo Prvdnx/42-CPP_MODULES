@@ -6,11 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:13:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/07 20:29:01 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 20:39:07 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
+#include <limits>
 
 ScalarConverter::ScalarConverter() {}
 
@@ -34,15 +35,11 @@ void	ScalarConverter::convert(const std::string &literal)
 		
 		return;
 	}
-
-	std::istringstream iss(literal);
-	iss >> number;
-	if (iss.fail())
-	{
-		std::cerr << "Invalid Input!🛑" << std::endl;
-		exit(1);
-	}
-
+	
+	std::string newLiteral = literal;
+	number = toDouble(newLiteral);
+	// number = std::stod(number);
+	
 	convertToChar(number);
 	convertToInt(number);
 	convertToFloat(number);
@@ -80,4 +77,27 @@ void	convertToFloat(double value)
 		std::cout << "float: " << value << "f" << std::endl;
 	else
 		std::cout << "float: " << std::fixed << std::setprecision(1) << static_cast<float>(value) << "f" << std::endl;
+}
+
+double	toDouble(std::string &literal)
+{
+	if (literal == "inf" || literal == "+inf" || literal == "inff" || literal == "+inff")
+		return (std::numeric_limits<double>::infinity()); // return rep. of positive infinity as a double (template class to query arithmetic types)
+	if (literal == "-inf" || literal == "-inff")
+		return (-std::numeric_limits<double>::infinity());
+	if (literal == "nan" || literal == "nanf")
+		return (std::numeric_limits<double>::quiet_NaN()); // returns rep. of a quiet NaN (Not a Number)
+
+	if (literal.back() == 'f')
+		literal.pop_back(); // if string ends with 'f' or 'F' remove it
+
+	std::istringstream iss(literal);
+	double	result;
+	iss >> result; // convert to double
+	if (iss.fail())
+	{
+		std::cerr << "Invalid Input!🛑" << std::endl;
+		exit(1);
+	}
+	return (result);
 }

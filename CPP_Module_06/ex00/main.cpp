@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:22:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/04 18:42:15 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/08 20:28:05 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ int	main(int argc, char *argv[])
 		return (1);
 	}
 
-    //ScalarConverter converter;	// create instance of ScalarConverter
 	ScalarConverter::convert(argv[1]);
 
 	return (0);
