@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/10 20:28:23 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/10 22:14:31 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ template <typename T>
 class	Array
 {
 	private:
-		T*	elements;
+		T	*elements;
 		unsigned int size_;
 
 	public:
@@ -49,7 +49,7 @@ class	Array
 				delete[] elements;
 				size_ = other.size_;
 				elements = new T[size_];
-				for (unsigned int i = 0; i < size_; ++i)
+				for (unsigned int i = 0; i < size_; i++)
 					elements[i] = other.elements[i];
 			}
 			return (*this);
