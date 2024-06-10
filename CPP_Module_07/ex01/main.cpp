@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:22:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/06 04:24:01 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/11 00:27:00 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 	iter(arr, len, squareX<int>); // apply square function to array elements
 
 	std::cout << "\nModified array >=> ";
-	iter(arr, len, printX<int>); // print array elements
+	iter(arr, len, printX<const int>); // print array elements
 
 	std::cout << '\n' << std::endl;
 

@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/07 09:37:52 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/11 00:26:02 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,15 @@
 #include <iostream>
 
 template<typename T>
-// void	iter(T *arr, size_t const &arrLen, void (*func)(T &))
+void	iter(T *arr, size_t const &arrLen, void (*func)(const T &))
+{
+	if (!arr || !func)
+		return;
+	for (size_t i = 0; i < arrLen; ++i)
+		func(arr[i]);
+}
+
+template<typename T>
 void	iter(T *arr, size_t arrLen, void func(T &))
 {
 	if (!arr || !func)
