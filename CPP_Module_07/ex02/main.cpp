@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main_.cpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:22:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/10 22:14:52 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/10 22:21:44 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int	main()
 		std::cout << "Accessing out of bounds element: ";	// access elements that are out of bound
 		std::cout << arr[16] << std::endl;
 	}
-	catch (const std::exception& e)
+	catch (const std::exception &e)
 	{
 		std::cerr << "Exception: " << e.what() << std::endl;
 	}
