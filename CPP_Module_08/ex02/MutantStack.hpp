@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:11:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/11 20:36:03 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 05:20:09 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class	MutantStack : public std::stack<T>
 
 		MutantStack() {}
 		MutantStack(const MutantStack<T>&) {}
-		MutantStack<T>& operator=(const MutantStack<T>&) {}
+		MutantStack<T> &operator=(const MutantStack<T>&) {}
 		~MutantStack() {}
 
 		iterator begin() { return std::stack<T>::c.begin(); }
