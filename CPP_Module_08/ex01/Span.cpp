@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 04:21:13 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/11 05:54:31 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 04:38:44 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void	Span::printData()
 		std::cout << *it << " ";
 }
 
-void Span::addRange(std::vector<int>::iterator first, std::vector<int>::iterator last)
+void	Span::addRange(std::vector<int>::iterator first, std::vector<int>::iterator last)
 {
 	size_t rangeSize = std::distance(first, last);
 	if (rangeSize > _N - _vec.size())
