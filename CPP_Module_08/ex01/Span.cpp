@@ -6,13 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 04:21:13 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/12 04:38:44 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 05:17:28 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 #include <algorithm>
-#include <stdexcept>
 #include <iostream>
 
 Span::Span(unsigned int n): _N(n) {}

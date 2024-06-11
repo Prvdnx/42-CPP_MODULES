@@ -6,14 +6,12 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:22:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/12 04:47:21 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 05:16:35 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <exception>
 #include <iostream>
-#include <vector>
 
 int	main()
 {
