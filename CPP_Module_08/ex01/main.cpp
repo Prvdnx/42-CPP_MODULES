@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:22:39 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/11 05:51:31 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 04:47:21 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main()
 		test2.addNumber(25);
 		test2.addNumber(23);
 		test2.addNumber(52);
+		test2.printData();
 		std::cout << "\nLongest span in test2: " << test2.longestSpan() << std::endl;
 		std::cout << "Shortest span in test2: " << test2.shortestSpan() << std::endl;
 
