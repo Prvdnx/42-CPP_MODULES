@@ -6,7 +6,7 @@
 /*   By: ookamonu <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/11 04:21:13 by ookamonu          #+#    #+#             */
-/*   Updated: 2024/06/12 05:17:28 by ookamonu         ###   ########.fr       */
+/*   Updated: 2024/06/12 21:16:15 by ookamonu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ int	Span::shortestSpan() const
 void	Span::printData()
 {
 	std::cout << "\nData in Span: ";
-	for (std::vector<int>::const_iterator it = _vec.begin(); it != _vec.end(); it++)
+	for (std::vector<int>::iterator it = _vec.begin(); it != _vec.end(); it++)
 		std::cout << *it << " ";
 }
 
